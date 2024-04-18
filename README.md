@@ -1,3 +1,93 @@
+__# Shadowsocks Plugin Management Script:__
+
+This script provides a comprehensive suite of utilities to manage and configure various Shadowsocks plugins along with other related services such as `kcptun`, `simple-obfs`, `v2ray-plugin`, and others on Unix-like operating systems.
+
+## Overview
+
+The script automates the tasks related to the installation, uninstallation, and management of Shadowsocks and its plugins. It supports various operations like starting, stopping, and updating Shadowsocks and its associated plugins, applying configurations, handling SSL certificates, and more.
+
+## Features
+
+- **Automatic Installation:** Scripts to install Shadowsocks and popular plugins such as `kcptun`, `simple-obfs`, `v2ray-plugin`, etc.
+- **Service Management:** Start, stop, restart, and check the status of installed services.
+- **Configuration Management:** Automatically apply or display configurations for services.
+- **Security:** Generate and renew SSL certificates for secure communications.
+- **Logging:** View and manage log files.
+- **Network Management:** Configure server ports and manage network settings.
+
+## Requirements
+
+- Unix-like operating system (CentOS, Ubuntu, Debian).
+- `curl` or `wget` should be available.
+- `tar`, `gzip` for decompression of files.
+- Root permissions are required for most operations.
+
+## Installation
+To install Shadowsocks and plugins, use the following command:
+```bash
+wget -N --no-check-certificate -c -t3 -T60 -O ss-plugins.sh https://raw.githubusercontent.com/oxmento/one-click/main/ss-plugins.sh
+chmod +x ss-plugins.sh
+./ss-plugins.sh install
+## Download and install:
+``` 
+## Usage:
+Here is how to use the script to manage the Shadowsocks services:
+```bash
+Usage:
+  ./ss-plugins.sh [options...] [args...]
+
+Available Options:
+  install          Install
+  uninstall        Uninstall
+  update           Update
+  start            Start
+  stop             Stop
+  restart          Restart
+  status           Check status
+  script           Update script
+  show             Visualize configuration
+  log              View log files
+  catcfg           View original configuration files
+  uid              Add a new uid user (Cloak)
+  cert             Apply for certificates for .cf .ga .gq .ml .tk (90 days)
+  link             Generate a new SS:// link using the newly added uid (Cloak)
+  scan             Generate a scannable QR code in the current terminal using the ss:// link
+  help             Print help information and exit
+```
+
+## Options:
+- install: Install Shadowsocks and select plugins.
+- uninstall: Remove the installed services.
+- update: Update the Shadowsocks and plugins to the latest versions.
+- start: Start the Shadowsocks service.
+- stop: Stop the Shadowsocks service.
+- restart: Restart the Shadowsocks service.
+- status: Check the status of Shadowsocks and its plugins.
+- log: View the log files of Shadowsocks and its plugins.
+- cert: Renew SSL certificates.
+- show: Display the configuration visually.
+- script: Upgrade the script itself.
+- uid: Add a new UID for Cloak users.
+- link: Generate a new SS:// link for the configuration.
+- scan: Generate a scannable QR code for mobile devices.
+- help: Display the help message and usage instructions.
+
+## Contributing:
+- Contributions to this script are welcome, especially in the areas of:
+  - Extending support to other plugins and configurations.
+  - Enhancing security features.
+  - Simplifying the management of network settings.
+
+## Acknowledgments:
+
+`Thanks to all the contributors who have helped in building and maintaining this script.`
+```markdown
+You can copy this revised document into a Markdown file or any text editor to save it as `README.md`. This version includes a more detailed breakdown of usage and available options for managing the Shadowsocks services.
+```
+
+
+
+
 ## ss-plugins.sh (Note: If an unexpected error occurs when running the script, please execute the ./ss-plugins.sh script to upgrade the script。)
 
 ## Download and install:
